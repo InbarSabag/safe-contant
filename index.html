@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Safe Content</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+</head>
+
+<body onload="onInit()">
+    <div class="login-box hidden">
+        <h1 class="singIn">Sing in!</h1>
+        <img  class="loginImg"src="img/login.png" alt="login image">
+        <form onsubmit="onLogin(event)">
+            <h3>Username</h3>
+            <input type="text" name="username" placeholder="Enter Username">
+            <h3>Password</h3>
+            <input type="text" name="password" placeholder="Enter Password">
+            <br>
+            <button class="loginBtn">Login</button>
+        </form>
+    </div>
+
+    <div class="secret-content">
+        <h2 class="greeting">welcome!</h2>
+        <img class="secret-img" src="img/secret.png" alt="top secret">
+        <div>
+            <button class="admin-btn hidden" src="admin.html"> ADMIN</button>
+            <button class="logout-btn" onclick="onLogout()">Logout</button>
+        </div>
+    </div>
+
+</body>
+<script src="js/services/util.service.js"></script>
+<script src="js/services/storage.service.js"></script>
+<script src="js/services/user.service.js"></script>
+<script src="js/main.js"></script>
+</html>
